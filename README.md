@@ -4,6 +4,6 @@ Open index.html through a static server. For local media seeking tests, run `nod
 
 The site uses English throughout. The initial envelope has no bird. Tap anywhere or use Enter/Space to begin. Intro playback supports skipping, replay, media failure fallback, and retries. The final decoded video frame stays fixed behind the scrolling content. A separate canvas layer adds a gentle breeze to the left botanical artwork; reduced-motion preferences disable it.
 
-Important remaining media work: assets/intro-v3.mp4 still uses the earlier generated animation. It does NOT yet show a dove arriving from offscreen and pecking the wax seal. intro-motion-brief.txt specifies the replacement sequence. Use assets/envelope-before-arrival.png as its first keyframe and assets/invitation-paper.png as its final composition. Replace the MP4 only after checking visible beak-to-seal contact and gold light AFTER contact.
+The active clip is assets/intro-v4.mp4 (720x1280, about 10 seconds). It starts with no bird, shows the dove arriving and touching the wax seal with its beak around 3.2 seconds, followed by gold sparkles and the envelope opening. intro-v4-start.png and intro-v4-end.png were captured from this clip for the gate/poster and media fallback. Normal playback retains the actual decoded last frame. intro-motion-brief.txt records the animation direction.
 
 Names, date, schedule and venue are sample content. The map is a sample Bangkok search. RSVP stores demo responses in the visitor's browser only; it does not send data to the hosts.

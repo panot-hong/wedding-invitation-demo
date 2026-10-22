@@ -24,7 +24,7 @@ class FoliageBreeze {
     let image = this.video;
     if (fallback) {
       image = new Image();
-      image.src = 'assets/invitation-paper.png';
+      image.src = 'assets/intro-v4-end.png';
       try { await image.decode(); } catch { return; }
     }
     if (serial !== this.serial) return;

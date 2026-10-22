@@ -1,4 +1,4 @@
-const settings = {introVideo: 'assets/intro-v3.mp4', rsvpStorageKey: 'wedding-rsvp-demo-v1'};
+const settings = {introVideo: 'assets/intro-v4.mp4', rsvpStorageKey: 'wedding-rsvp-demo-v1'};
 const gate = document.querySelector('#gate');
 const cinema = document.querySelector('#cinema');
 const video = document.querySelector('#intro');

@@ -86,3 +86,6 @@ html::-webkit-scrollbar{display:none}
 .gate{background-image:url('assets/envelope-before-arrival.png')}
 #open:focus-visible span{outline:2px solid var(--gold);outline-offset:5px}
 @media(prefers-reduced-motion:reduce){#foliage{display:none!important}}
+/* Match the actual first and final frames of the arrive-and-peck video. */
+.gate{background-image:url('assets/intro-v4-start.png')}
+#cinema{background-image:url('assets/intro-v4-end.png')}
