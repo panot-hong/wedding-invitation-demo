@@ -39,3 +39,15 @@
 #invitation .swatches{gap:9px}
 #invitation .swatches span{width:28px;height:28px}
 }
+/* The still envelope and video share a portrait stage. */
+.gate{position:relative;background:var(--paper) url('assets/envelope-poster.png') center/contain no-repeat;height:100svh;padding:0}
+.gate-inner{position:absolute;inset:0;margin:auto;width:min(100vw,56.25svh);padding:0;border:0;outline:0}
+.gate-inner>.small,.gate-inner>.seal,.gate-inner>h1,.gate-inner>p{display:none}
+.gate-inner>#open{position:absolute;top:67%;left:50%;transform:translateX(-50%);white-space:nowrap;background:#f8f4ebef;color:#645332;box-shadow:0 3px 18px #51432720;font-size:14px}
+#cinema{opacity:1;transition:opacity .65s ease;overflow:hidden}
+#cinema.leaving{opacity:0;pointer-events:none}
+#cinema video{max-width:100%;height:100svh;object-fit:contain}
+#invitation .hero{background:var(--paper) url('assets/invitation-paper.png') center top/100% auto no-repeat}
+#skip{z-index:1}
+@media(prefers-reduced-motion:reduce){#cinema{transition:none}}
+#invitation .hero{background-size:cover;background-position:left top}
