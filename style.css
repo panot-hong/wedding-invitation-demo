@@ -78,3 +78,11 @@ html::-webkit-scrollbar{display:none}
 #invitation .paper{padding-left:clamp(92px,max(27vw,15svh),205px)}
 #invitation footer{padding-left:clamp(82px,max(25vw,14svh),190px)}
 @media(max-width:600px){#invitation h2{font-size:clamp(30px,8.5vw,39px)}}
+/* A native full-screen button supports touch, mouse, Enter and Space. */
+.gate-inner>#open{position:fixed;inset:0;top:0;left:0;width:100vw;height:100%;padding:0;border:0;border-radius:0;transform:none;background:transparent;box-shadow:none;color:#645332;white-space:normal;cursor:pointer}
+.gate-inner>#open:hover{filter:none;background:transparent}
+#open span{position:absolute;left:50%;bottom:max(12%,40px);transform:translateX(-50%);white-space:nowrap;padding:10px 22px;border:1px solid #bca57788;border-radius:28px;background:#f8f4ebde;font-size:13px;letter-spacing:.06em}
+#foliage{position:absolute;left:0;top:0;height:100%;pointer-events:none;mask-image:linear-gradient(to right,#000 65%,transparent 100%);-webkit-mask-image:linear-gradient(to right,#000 65%,transparent 100%)}
+.gate{background-image:url('assets/envelope-before-arrival.png')}
+#open:focus-visible span{outline:2px solid var(--gold);outline-offset:5px}
+@media(prefers-reduced-motion:reduce){#foliage{display:none!important}}

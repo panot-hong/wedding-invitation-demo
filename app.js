@@ -3,6 +3,7 @@ const gate = document.querySelector('#gate');
 const cinema = document.querySelector('#cinema');
 const video = document.querySelector('#intro');
 const page = document.querySelector('main');
+const breeze = new FoliageBreeze(document.querySelector('#foliage'), video);
 const openButton = document.querySelector('#open');
 const skipButton = document.querySelector('#skip');
 let sceneVersion = 0;
@@ -18,6 +19,7 @@ function reveal({fallback = false} = {}) {
   cinema.classList.toggle('fallback', fallback);
   cinema.classList.add('backdrop');
   skipButton.hidden = true;
+  breeze.start(fallback);
   page.hidden = false;
   document.body.classList.add('invitation-ready');
   window.scrollTo({top: 0, behavior: 'instant'});
@@ -30,6 +32,7 @@ function reveal({fallback = false} = {}) {
 async function start() {
   if (opening) return;
   opening = true;
+  breeze.stop();
   const version = ++sceneVersion;
   skipping = false;
   document.body.classList.remove('invitation-ready');
@@ -82,6 +85,7 @@ video.addEventListener('error', () => {
 });
 document.querySelector('#replay').addEventListener('click', () => {
   ++sceneVersion;
+  breeze.stop();
   opening = false;
   video.pause();
   page.hidden = true;
@@ -103,7 +107,7 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   const values = Object.fromEntries(new FormData(form));
   if (!values.name.trim()) {
-    form.elements.name.setCustomValidity('กรุณาระบุชื่อ');
+    form.elements.name.setCustomValidity('Please enter your name.');
     form.elements.name.reportValidity();
     return;
   }
@@ -112,9 +116,9 @@ form.addEventListener('submit', event => {
   const result = document.querySelector('#result');
   try {
     localStorage.setItem(settings.rsvpStorageKey, JSON.stringify({...values, savedAt: new Date().toISOString()}));
-    result.textContent = 'บันทึกคำตอบตัวอย่างแล้วบนเบราว์เซอร์นี้ — ยังไม่ได้ส่งถึงเจ้าภาพ';
+    result.textContent = 'Your demo RSVP has been saved in this browser. It has not been sent to the hosts.';
   } catch {
-    result.textContent = 'เบราว์เซอร์ไม่อนุญาตให้บันทึกข้อมูล กรุณาลองอีกครั้ง';
+    result.textContent = 'Your browser could not save your response. Please try again.';
   }
   result.focus();
 });

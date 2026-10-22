@@ -1,0 +1,14 @@
+Use image 1 (the CLOSED ENVELOPE WITH NO BIRD) as the exact first frame. Use image 2 (the open ivory invitation with the vine along its left edge) as the final frame. Create a single 8-second portrait 9:16 video. Lock the camera and preserve the artwork, seal position, and paper color.
+
+The required story is ARRIVE -> PECK -> GOLD LIGHT -> OPEN. Do not reverse this order.
+
+0.0-1.0 seconds: Hold the closed envelope still. There is NO BIRD visible anywhere in the frame. The bird must begin entirely OFF SCREEN.
+1.0-2.5 seconds: One white dove flies into the frame from the upper-right edge, approaching the gold wax seal. Natural wing beats, realistic anatomy, graceful controlled movement. Keep its body and wings within the frame once it reaches the seal.
+2.5-3.2 seconds: The dove hovers beside the seal, visibly lowers its head, and PECKS THE CENTER OF THE WAX SEAL ONCE WITH ITS BEAK. The beak tip must visibly touch the gold seal. The head, not the bird's feet, initiates contact.
+3.2-4.0 seconds: ONLY AFTER beak contact, a warm champagne-gold glint appears at the contact point, followed by a brief delicate burst of gold sparkles. The seal releases. Before the peck, there is no light burst and the envelope stays closed.
+4.0-6.0 seconds: The dove flies upward out of frame. The envelope flaps open outward beyond the screen edges, revealing the invitation beneath. Do not create multiple stacked cards or an envelope pocket.
+6.0-8.0 seconds: Finish on image 2 with no envelope, seal, or bird remaining. Keep the camera and paper still. Only the leaves and small flowers of the LEFT VINE sway very gently in a light breeze. Their stems remain anchored; the vine does not slide up or down. This botanical motion should continue softly through the ending, without a sudden stop.
+
+No text, names, numbers, logos, new flowers, extra birds, confetti, music, or speech. No camera movement, zoom, or scene cuts. Avoid a bird already sitting on the seal at frame one. Do not have the dove merely fly away without first arriving and visibly pecking the seal.
+
+Website interaction note (not part of the rendered video): the website shows image 1 until a visitor taps anywhere. This video begins only after that tap. Do not render a tap indicator or button inside the video.
