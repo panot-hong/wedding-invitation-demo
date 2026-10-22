@@ -7,6 +7,7 @@ const openButton = document.querySelector('#open');
 const skipButton = document.querySelector('#skip');
 let sceneVersion = 0;
 let opening = false;
+let skipping = false;
 
 // Keep the actual decoded final frame on screen. The background never swaps.
 function reveal({fallback = false} = {}) {
@@ -29,19 +30,28 @@ function reveal({fallback = false} = {}) {
 async function start() {
   if (opening) return;
   opening = true;
-  ++sceneVersion;
+  const version = ++sceneVersion;
+  skipping = false;
   document.body.classList.remove('invitation-ready');
   page.hidden = true;
   gate.hidden = true;
   cinema.hidden = false;
   cinema.classList.remove('backdrop', 'fallback');
   skipButton.hidden = false;
-  if (!video.getAttribute('src')) video.src = settings.introVideo;
+  if (!video.getAttribute('src') || video.error) {
+    video.src = settings.introVideo;
+    video.load();
+  }
   video.currentTime = 0;
-  try { await video.play(); } catch { reveal({fallback: true}); }
+  try { await video.play(); } catch {
+    // pause() during an intentional skip/replay can reject an earlier play().
+    if (opening && !skipping && version === sceneVersion) reveal({fallback: true});
+  }
 }
 
 async function skipIntro() {
+  if (!opening || skipping) return;
+  skipping = true;
   const version = sceneVersion;
   video.pause();
   if (!Number.isFinite(video.duration) || video.duration <= 0 || !video.seekable.length) {

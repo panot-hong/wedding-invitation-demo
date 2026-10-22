@@ -74,3 +74,7 @@ html::-webkit-scrollbar{display:none}
 .gate,#cinema{background-position:left center}
 #cinema video{object-position:left center}
 @media(min-width:800px){.gate,#cinema{width:720px;margin-inline:auto}}
+/* Reserve the vine's visible width after cover scales the portrait scene. */
+#invitation .paper{padding-left:clamp(92px,max(27vw,15svh),205px)}
+#invitation footer{padding-left:clamp(82px,max(25vw,14svh),190px)}
+@media(max-width:600px){#invitation h2{font-size:clamp(30px,8.5vw,39px)}}
