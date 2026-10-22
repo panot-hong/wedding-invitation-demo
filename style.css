@@ -1,2 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Thai:wght@300;400;500&display=swap');
 :root{--paper:#f8f4eb;--ink:#424738;--gold:#a1844e;--line:#d7c8aa}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.85 'Noto Sans Thai',sans-serif;font-weight:300}button,input,select,textarea{font:inherit}button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}a{color:inherit}button,.button{cursor:pointer;border:1px solid var(--gold);background:var(--gold);color:white;border-radius:30px;padding:12px 30px;text-decoration:none;display:inline-block;font-weight:400;transition:filter .2s}button:hover,.button:hover{filter:brightness(.92)}:focus-visible{outline:3px solid #666f50;outline-offset:5px}[hidden]{display:none!important}h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.05;margin:0}h2{font-size:clamp(42px,6vw,60px)}p{margin:16px 0}.small{font:400 11px/1.8 'Noto Sans Thai',sans-serif;letter-spacing:.24em}.quiet{font-size:12px;color:#777566;line-height:1.8}.gate{min-height:100svh;display:grid;place-items:center;text-align:center;padding:32px;background:radial-gradient(ellipse at center,#fffdf7,var(--paper) 65%)}.gate-inner{border:1px solid var(--line);padding:50px 34px;outline:1px solid var(--line);outline-offset:9px;width:min(100%,460px)}.gate h1{font-size:45px;margin:25px 0}.gate .seal{height:92px;width:92px;border:double 5px #c0a871;border-radius:50%;display:grid;place-content:center;grid-auto-flow:column;gap:5px;margin:32px auto;color:var(--gold);font:28px Georgia;background:#eee0bd;box-shadow:0 5px 20px #a1844e20}.seal i{font-size:20px}nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;position:sticky;top:0;background:#f8f4ebf5;z-index:3;border-bottom:1px solid #d7c8aa55}nav>a{font:24px Georgia;text-decoration:none;color:var(--gold)}nav div{display:flex;gap:24px}nav div a{font-size:12px;text-decoration:none}.paper{position:relative;max-width:740px;margin:auto;text-align:center;padding:80px 35px;border-bottom:1px solid #d7c8aa66}.hero{min-height:calc(100svh - 70px);display:flex;align-items:center;flex-direction:column;justify-content:center;padding-top:55px}.hero h1{font-size:clamp(76px,14vw,120px);margin:22px 0 34px}.hero h1 span{display:block}.hero em{font-weight:400;font-size:.75em;display:block;color:var(--gold);line-height:.8;margin:8px 0}.date{font:20px Georgia;letter-spacing:.2em}.divider{color:var(--gold);display:flex;align-items:center;justify-content:center;gap:20px;font:30px Georgia;margin:25px auto;width:220px}.divider:before,.divider:after{content:'';height:1px;background:var(--line);width:70px}.inviting{font:22px/1.4 'Cormorant Garamond',Georgia;margin:24px 0}.scroll{font-size:10px;text-decoration:none;letter-spacing:.14em;margin-top:24px}.scroll span{display:block;font-size:25px;color:var(--gold)}.intro-copy{margin:25px auto 35px;font-size:14px}.timeline{padding:0;list-style:none;text-align:left;margin:35px auto;max-width:380px}.timeline li{display:grid;grid-template-columns:80px 1fr;gap:30px}.timeline time{letter-spacing:.18em;font:18px Georgia;padding-top:8px;text-align:right}.timeline li>div{border-left:1px solid var(--gold);padding:0 0 36px 30px;position:relative}.timeline li>div:before{content:'';position:absolute;width:9px;height:9px;border-radius:50%;background:var(--gold);left:-5px;top:10px}.timeline li:last-child>div{padding-bottom:5px}.timeline h3{font-size:33px}.timeline p{font-size:12px;margin:8px 0 0;color:#7c7b6d}.venue{font-size:40px}.dress{margin-top:55px}.dress>p{margin:8px}.swatches{display:flex;gap:14px;justify-content:center;margin-top:20px}.swatches span{width:33px;height:33px;border-radius:50%;border:1px solid #b8ab8b55;background:#eee4d5}.swatches span:nth-child(2){background:#d2c7b5}.swatches span:nth-child(3){background:#afa58c}.swatches span:nth-child(4){background:#7c836a}.swatches span:nth-child(5){background:#454638}form{max-width:470px;text-align:left;margin:40px auto 0}form>label{display:block;margin-bottom:24px;font-size:12px;font-weight:400}input:not([type=radio]),select,textarea{display:block;width:100%;margin-top:8px;border:1px solid #c9c7ba;border-radius:5px;padding:12px 15px;color:var(--ink);background:#fff9;font-size:14px}textarea{resize:vertical;min-height:100px}fieldset{border:0;padding:0;margin:0 0 25px}legend{font-size:12px;margin-bottom:12px}label.radio{display:inline-flex;gap:8px;align-items:center;font-size:13px;margin-right:18px}input[type=radio]{accent-color:var(--gold);width:18px;height:18px}form button{width:100%}form>.quiet{text-align:center}#result{font-size:14px;text-align:center;color:#4f6246}footer{text-align:center;padding:45px 20px;font:25px Georgia}footer span{display:block;font:10px 'Noto Sans Thai';letter-spacing:.2em;margin:15px}.text-button{border:0;background:none;color:var(--gold);font-size:12px;padding:8px}#cinema{position:fixed;inset:0;background:var(--paper);z-index:10;display:grid;place-items:center}video{height:100%;width:100%;object-fit:contain}#skip{position:absolute;right:20px;bottom:30px;background:#f8f4ebdd;color:var(--ink);font-size:12px}.arrive{animation:arrive 1s ease both}@keyframes arrive{from{opacity:0}to{opacity:1}}@media(min-width:1000px){main{max-width:1100px;margin:auto;border-left:1px solid #d7c8aa55;border-right:1px solid #d7c8aa55}.paper{max-width:850px}.hero h1{font-size:120px}}@media(max-width:420px){.paper{padding:65px 24px}.hero{padding-top:35px}.timeline li{grid-template-columns:60px 1fr;gap:22px}.timeline li>div{padding-left:24px}.gate-inner{padding:40px 22px}.gate h1{font-size:38px}label.radio{display:flex;margin-bottom:12px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.arrive{animation:none}}
+
+/* Continuous botanical margin, following the scrolling reference invitation. */
+#invitation{position:relative;isolation:isolate;max-width:720px;margin-inline:auto;border:0;background:var(--paper)}
+#invitation::before{content:'';position:absolute;inset:56px auto 0 0;width:160px;background-image:url('assets/climbing-roses.png');background-size:210px auto;background-repeat:repeat-y;pointer-events:none;z-index:-1;opacity:.9}
+#invitation nav{padding:13px 24px;background:#f8f4ebed;border-bottom:0}
+#invitation .paper{max-width:none;border-bottom:0;padding:80px 38px 80px 155px}
+#invitation .hero{padding-top:55px;min-height:calc(100svh - 56px)}
+#invitation .hero h1{font-size:100px}
+#invitation .paper .small{letter-spacing:.18em}
+#invitation .date{font-size:17px;letter-spacing:.13em}
+#invitation .inviting{font-size:21px}
+#invitation .timeline li{grid-template-columns:65px 1fr;gap:20px}
+#invitation .timeline li>div{padding-left:22px}
+#invitation .timeline h3{font-size:32px}
+#invitation footer{padding-left:135px}
+@media(max-width:600px){
+#invitation::before{width:90px;background-size:132px auto;opacity:.87}
+#invitation .paper{padding:65px 22px 65px 92px}
+#invitation .hero{padding-top:42px}
+#invitation .hero h1{font-size:clamp(58px,17vw,86px);margin-block:25px}
+#invitation .small{font-size:9px;letter-spacing:.12em}
+#invitation .date{font-size:13px;letter-spacing:.1em}
+#invitation .inviting{font-size:19px;line-height:1.6}
+#invitation .inviting br{display:none}
+#invitation h2{font-size:39px}
+#invitation .divider{width:160px;gap:14px}
+#invitation .timeline li{grid-template-columns:44px 1fr;gap:12px}
+#invitation .timeline time{font-size:14px;letter-spacing:.06em}
+#invitation .timeline li>div{padding-left:14px}
+#invitation .timeline h3{font-size:27px}
+#invitation .venue{font-size:34px}
+#invitation .intro-copy{font-size:13px}
+#invitation .button{padding:11px 18px;font-size:12px}
+#invitation label.radio{display:flex;margin-bottom:10px}
+#invitation form button{padding-inline:12px;font-size:13px}
+#invitation footer{padding-left:82px}
+#invitation .swatches{gap:9px}
+#invitation .swatches span{width:28px;height:28px}
+}
