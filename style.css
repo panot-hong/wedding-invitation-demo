@@ -51,3 +51,26 @@
 #skip{z-index:1}
 @media(prefers-reduced-motion:reduce){#cinema{transition:none}}
 #invitation .hero{background-size:cover;background-position:left top}
+
+/* One viewport scene from poster through playback to the frozen final frame. */
+html{scrollbar-gutter:stable}
+body:not(.invitation-ready){overflow:hidden}
+.gate{position:fixed;inset:0;min-height:0;height:100%;background-size:cover;background-position:center;z-index:2}
+.gate-inner{width:100%;height:100%;padding:0}
+#cinema{position:fixed;inset:0;width:100%;height:100%;opacity:1;transition:none;z-index:10;background:var(--paper) url('assets/invitation-paper.png') center/cover no-repeat}
+#cinema video{display:block;position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+#cinema.backdrop{z-index:0;pointer-events:none}
+#cinema.fallback video{visibility:hidden}
+#skip{bottom:max(24px,env(safe-area-inset-bottom));right:20px}
+#invitation{z-index:1;background:transparent;opacity:0;transition:opacity 1.2s ease;isolation:auto}
+#invitation.content-visible{opacity:1}
+#invitation::before{display:none}
+#invitation .paper,#invitation .hero{background:none}
+#invitation .hero{min-height:calc(100svh - 56px);padding-top:42px}
+#invitation nav{background:#f8f4ebd9;backdrop-filter:blur(8px)}
+@media(prefers-reduced-motion:reduce){#invitation{transition:none}}
+html{scrollbar-gutter:auto;scrollbar-width:none}
+html::-webkit-scrollbar{display:none}
+.gate,#cinema{background-position:left center}
+#cinema video{object-position:left center}
+@media(min-width:800px){.gate,#cinema{width:720px;margin-inline:auto}}
