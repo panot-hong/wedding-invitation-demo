@@ -102,6 +102,14 @@ html::-webkit-scrollbar{display:none}
 #invitation #home .scroll span{font-size:18px;color:#8d3d32}
 /* Fixed floral layer loops in the browser even while the content is scrolling. */
 #foliage{width:100%;height:100%;object-fit:cover;object-position:left center;opacity:0;transition:opacity .6s ease;mask-image:linear-gradient(to right,#000 28%,transparent 42%);-webkit-mask-image:linear-gradient(to right,#000 28%,transparent 42%)}
-#foliage.moving{opacity:1}
+#foliage.moving{opacity:1;transform-origin:0 100%;will-change:transform;animation:foliage-sway 5.6s ease-in-out infinite}
+/* Composited motion keeps swaying through touch scrolling. Remove the frozen
+   duplicate underneath so the moving silhouette stays distinct. */
+#cinema.backdrop:has(#foliage.moving){background-image:none}
+#cinema.backdrop:has(#foliage.moving) video{opacity:0;transition:opacity .6s ease}
+@keyframes foliage-sway{
+  0%,100%{transform:translate3d(-5px,0,0) rotate(-.8deg) scale(1.045)}
+  50%{transform:translate3d(7px,-3px,0) rotate(1deg) scale(1.045)}
+}
 @media(min-width:800px){#invitation #home{padding-top:110px;padding-bottom:390px;min-height:1000px}}
 @media(prefers-reduced-motion:reduce){#foliage{transition:none}}
