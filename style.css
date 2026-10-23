@@ -85,7 +85,7 @@ html::-webkit-scrollbar{display:none}
 #foliage{position:absolute;left:0;top:0;height:100%;pointer-events:none;mask-image:linear-gradient(to right,#000 65%,transparent 100%);-webkit-mask-image:linear-gradient(to right,#000 65%,transparent 100%)}
 .gate{background-image:url('assets/envelope-before-arrival.png')}
 #open:focus-visible span{outline:2px solid var(--gold);outline-offset:5px}
-@media(prefers-reduced-motion:reduce){#foliage{display:none!important}}
+/* Reduced motion is the default preference; visitors can explicitly opt in. */
 /* Match the actual first and final frames of the arrive-and-peck video. */
 .gate{background-image:url('assets/intro-v4-start.png')}
 #cinema{background-image:url('assets/intro-v4-end.png')}
@@ -113,3 +113,6 @@ html::-webkit-scrollbar{display:none}
 }
 @media(min-width:800px){#invitation #home{padding-top:110px;padding-bottom:390px;min-height:1000px}}
 @media(prefers-reduced-motion:reduce){#foliage{transition:none}}
+#invitation nav div{align-items:center;gap:18px}
+#motion-toggle{padding:4px 9px;border:1px solid #a1844e66;background:transparent;color:#645332;font-size:10px;line-height:1.6;white-space:nowrap}
+@media(max-width:360px){#invitation nav{padding-inline:16px}#invitation nav div{gap:12px}}
