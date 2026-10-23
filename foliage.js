@@ -1,5 +1,4 @@
-// Native animated WebP: 120 frames, a six-second seamless loop, loop=0 (forever).
-// The browser decodes the motion independently of JavaScript drawing and scroll.
+// Keep the original artwork intact; CSS rotates it gently without deforming leaves.
 class FoliageBreeze {
   constructor(image) {
     this.image = image;
